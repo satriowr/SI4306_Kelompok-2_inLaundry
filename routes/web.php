@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('onBoarding');
 });
 
+Route::get('/admin', function () {
+    return view('Admin.index');
+});
+
 
 Route::get('/signup', [registerController::class, 'index']);
 Route::post('/signup', [registerController::class, 'store']);
