@@ -23,6 +23,10 @@ Route::get('/admin', function () {
     return view('Admin.dashboard');
 });
 
+Route::get('/admin/order', function () {
+    return view('Admin.order');
+});
+
 
 Route::get('/signup', [registerController::class, 'index']);
 Route::post('/signup', [registerController::class, 'store']);
