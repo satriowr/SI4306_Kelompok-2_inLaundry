@@ -137,6 +137,11 @@
             margin-left:50px;
             margin-top:50px;
         }
+
+        .content-orders{
+            margin-left:50px;
+            margin-top:50px;
+        }
     </style>
 </head>
 <body>
@@ -144,20 +149,20 @@
         <div class="navigationSidebar">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="/">
                         <img width="170" src="assets\logo\logo.png" alt="">
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/admin">
                         <span class="icon"><ion-icon name="grid"></ion-icon></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/admin/order">
                         <span class="icon"><ion-icon name="person"></ion-icon></span>
                         <span class="title">Orders</span>
                     </a>
