@@ -3,7 +3,6 @@
 @section('container')
 
 <div class="content-orders">
-
     <div class="component-atas" style="margin-left: 650px">
         <div class="content-flex d-flex flex-row  gap-4">
             <div class="searcbar">
@@ -22,7 +21,60 @@
             </div>
         </div>
     </div>
-        
+    
+    <div class="component-bawah">
+        <form action="" method="post">
+            <div class="bar-atas" style="margin-top: 69px">
+                <h3 style="font-weight: bold">Order Page</h3>
+                <button style="margin-top:20px" type="submit" class="btn btn-danger">Update Order</button>
+            </div>
+    
+            <table class="table" style="margin-top:35px">
+                <thead>
+                  <tr>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Services Detail</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    @foreach ($showOrder as $order)
+                    <tr>
+                        <td>
+                            <div class="detail d-flex flex-row">
+                                <div class="image">
+                                    <img width="44px" height="44px" style="border-radius:100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_D7EI-JyKW6DUp5AAoGHQ9kV11tg6cUOcw&usqp=CAU" alt="">
+                                </div>
+                                <div class="text" style="margin-left:24px">
+                                    <h6 style="font-weight: bold">{{ $order->name }}</h6>
+                                    <p style="color: #C5C7CD">{{ $order->address }}</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <h6 style="font-weight: bold">{{ $order->Service_detail }} - 5 kg</h6>
+                            <p style="color: #C5C7CD">{{ $order->price }}</p>
+                        </td>
+                        <td>
+                            <h6 style="font-weight: bold">{{ $order->created_at }}</h6>
+                            {{-- <p style="color: #C5C7CD">9:30 PM</p> --}}
+                        </td>
+                        <td>
+                            <select class="form-select" name="status" aria-label="Default select example">
+                                <option selected>Choose Status</option>
+                                <option  value="1">Waiting</option>
+                                <option value="2">Pick Up</option>
+                                <option value="3">Finish</option>
+                            </select>
+                        </td>
+                      </tr>
+                    @endforeach
+                  
+                </tbody>
+            </table>
+        </form>
+    </div>
 
 </div>
 
