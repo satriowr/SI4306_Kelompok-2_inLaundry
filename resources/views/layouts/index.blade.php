@@ -149,13 +149,11 @@
         <div class="navigationSidebar">
             <ul>
                 <li>
-                    <a href="/">
-                        <img width="170" src="assets\logo\logo.png" alt="">
-                    </a>
+                    <img width="170px" src="https://i.postimg.cc/q7wFVBpQ/logo.png" alt="">
                 </li>
 
                 <li>
-                    <a href="/admin">
+                    <a href="/admin/dashboard">
                         <span class="icon"><ion-icon name="grid"></ion-icon></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
@@ -183,7 +181,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/admin/report">
                         <span class="icon"><ion-icon name="megaphone"></ion-icon></span>
                         <span class="title">Reports</span>
                     </a>
