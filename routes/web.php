@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\registerController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\admin_orderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +20,16 @@ Route::get('/', function () {
     return view('onBoarding');
 });
 
-Route::get('/admin', function () {
+Route::get('/admin/dashboard', function () {
     return view('Admin.dashboard');
 });
 
-Route::get('/admin/order', function () {
-    return view('Admin.order');
+// Route::get('/admin/order', function () {
+//     return view('Admin.order');
+// });
+
+Route::get('/admin/report', function () {
+    return view('Admin.report');
 });
 
 
@@ -33,3 +38,6 @@ Route::post('/signup', [registerController::class, 'store']);
 
 Route::get('/signin', [loginController::class, 'index']);
 Route::post('/signin', [loginController::class, 'validates']);
+
+Route::get('/admin/order', [admin_orderController::class, 'index']);
+Route::post('/admin/order', [admin_orderController::class, 'update']);
