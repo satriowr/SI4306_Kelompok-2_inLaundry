@@ -42,7 +42,7 @@
             <br>
             <div class="content-flex d-flex flex-row">
                 <div class="icons d-flex justify-content-center" style="margin-top: 20px; margin-left:24px;  width: 56px; height:56px; border-radius: 15px 5px 15px 5px; background-color: #F3F6FF; padding-top:12px">
-                    <img width="35.4px" height="32px" src="assets\fluent_money-hand-20-filled.png" alt="">
+                    <img width="35.4px" height="32px" src="https://i.postimg.cc/vm1XJgdb/fluent-money-hand-20-filled.png" alt="">
                 </div>
 
                 <div class="harga" style="margin-top: 30px; margin-left:16px;">
