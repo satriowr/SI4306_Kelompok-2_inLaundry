@@ -44,7 +44,7 @@
                         <td>
                             <div class="detail d-flex flex-row">
                                 <div class="image">
-                                    <img width="44px" height="44px" style="border-radius:100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_D7EI-JyKW6DUp5AAoGHQ9kV11tg6cUOcw&usqp=CAU" alt="">
+                                    <img width="44px" height="44px" style="border-radius:100px" src="{{ $order->image }}" alt="">
                                 </div>
                                 <div class="text" style="margin-left:24px">
                                     <h6 style="font-weight: bold">{{ $order->name }}</h6>
