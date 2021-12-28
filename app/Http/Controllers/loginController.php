@@ -20,8 +20,8 @@ class loginController extends Controller
 
         if(Auth::attempt($validate)){
             $request->session()->regenerate();
-            dd("login iso");
-            //return redirect()->intended('/home');
+            //dd("login iso");
+            return redirect()->intended('home');
         }
         
         return back()->with('loginError', 'Email atau Password Salah');
