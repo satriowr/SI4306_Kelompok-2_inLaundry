@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\registerController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\admin_orderController;
+use App\Http\Controllers\user_indexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ Route::get('/', function () {
     return view('onBoarding');
 });
 
-Route::get('/admin/dashboard', function () {
+Route::get('/admin/dashboard', function () {  
     return view('Admin.dashboard');
 });
 
@@ -41,3 +42,5 @@ Route::post('/signin', [loginController::class, 'validates']);
 
 Route::get('/admin/order', [admin_orderController::class, 'index']);
 Route::post('/admin/order', [admin_orderController::class, 'update']);
+
+Route::get('/home', [user_indexController::class, 'index']);
