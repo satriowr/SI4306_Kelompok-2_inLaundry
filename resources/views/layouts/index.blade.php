@@ -167,7 +167,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/admin/products">
                         <span class="icon"><ion-icon name="shirt"></ion-icon></span>
                         <span class="title">Products</span>
                     </a>
