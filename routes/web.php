@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\registerController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\admin_orderController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\user_indexController;
 
 /*
@@ -21,7 +22,7 @@ Route::get('/', function () {
     return view('onBoarding');
 });
 
-Route::get('/admin/dashboard', function () {  
+Route::get('/admin/dashboard', function () {
     return view('Admin.dashboard');
 });
 
@@ -33,6 +34,9 @@ Route::get('/admin/report', function () {
     return view('Admin.report');
 });
 
+Route::get('/admin/product', function () {
+    return view('Admin.product');
+});
 
 Route::get('/signup', [registerController::class, 'index']);
 Route::post('/signup', [registerController::class, 'store']);
@@ -42,5 +46,8 @@ Route::post('/signin', [loginController::class, 'validates']);
 
 Route::get('/admin/order', [admin_orderController::class, 'index']);
 Route::post('/admin/order', [admin_orderController::class, 'update']);
+
+Route::get('/admin/products', [ProductsController::class, 'index']);
+Route::resource('/admin/products', ProductsController::class);
 
 Route::get('/home', [user_indexController::class, 'index']);
