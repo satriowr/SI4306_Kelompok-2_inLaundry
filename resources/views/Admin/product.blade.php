@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('layouts.index-admin')
 
 @section('container')
 <div class="content-orders">
