@@ -7,6 +7,10 @@
     <title>Home | inLaundry</title>
 </head>
 <body>
-    <h1>hello world</h1>
+    @extends('layouts.index-user')
+
+    @section('container')
+
+    @endsection
 </body>
 </html>
