@@ -53,10 +53,6 @@
                 <a class="nav-link" href="#">How it Works</a>
               </li>
 
-              <li class="nav-item">
-                <a href="#" class="nav-link">Services</a>
-              </li>
-
               {{-- <li class="nav-item">
                 <a href="#" class="nav-link">Testimony</a>
               </li> --}}
