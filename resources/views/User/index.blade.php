@@ -29,10 +29,83 @@
        
     </div>
 
-    <div class="container">
-        <div class="box-menu" style="width: 100px; height: 100px">
-            <img src="assets\icon\003-towel.png" alt="">
-        </div>
+    <div class="container mt-5 d-flex justify-content-center flex-row gap-4">
+        <a href="/dryclean" style="text-decoration: none;">
+          <div class="box-menu" style="width: 100px; padding-top:7px; height: 100px; border-style:solid; border-color:#F4F4F4; border-width:4px;; border-radius:16px">
+            <div class="image d-flex justify-content-center">
+              <img width="50px" height="50px" src="assets\icon\003-towel.png" alt="">
+            </div>
+            <div class="text-center mt-2">
+              <p style="font-size: 12px; text-decoration:none; color:black">Dry Clean</p>
+            </div>
+          </div> 
+        </a>
+
+        <a href="/fullwash" style="text-decoration: none;">
+          <div class="box-menu" style="width: 100px; padding-top:7px; height: 100px; border-style:solid; border-color:#F4F4F4; border-width:4px;; border-radius:16px">
+            <div class="image d-flex justify-content-center">
+              <img width="50px" height="50px" src="https://i.ibb.co/c2PNQkG/001-washing-machine.png" alt="">
+            </div>
+            <div class="text-center mt-2">
+              <p style="font-size: 12px; color:black">Full Wash</p>
+            </div>
+          </div> 
+        </a>
+
+        <a href="/iron" style="text-decoration: none;">
+          <div class="box-menu" style="width: 100px; padding-top:7px; height: 100px; border-style:solid; border-color:#F4F4F4; border-width:4px;; border-radius:16px">
+            <div class="image d-flex justify-content-center">
+              <img width="50px" height="50px" src="https://cdn-icons-png.flaticon.com/512/2228/2228113.png" alt="">
+            </div>
+            <div class="text-center mt-2">
+              <p style="font-size: 12px; color:black">Iron</p>
+            </div>
+          </div> 
+        </a>
+
+        <a href="/shoeswash" style="text-decoration: none;">
+          <div class="box-menu" style="width: 100px; padding-top:7px; height: 100px; border-style:solid; border-color:#F4F4F4; border-width:4px;; border-radius:16px">
+            <div class="image d-flex justify-content-center">
+              <img width="50px" height="50px" src="https://cdn-icons-png.flaticon.com/512/2742/2742674.png" alt="">
+            </div>
+            <div class="text-center mt-2">
+              <p style="font-size: 12px; color:black">Shoes Wash</p>
+            </div>
+          </div> 
+        </a>
+
+        <a href="/carpetWash" style="text-decoration: none;">
+          <div class="box-menu" style="width: 100px; padding-top:7px; height: 100px; border-style:solid; border-color:#F4F4F4; border-width:4px;; border-radius:16px">
+            <div class="image d-flex justify-content-center">
+              <img width="50px" height="50px" src="https://cdn-icons-png.flaticon.com/512/6172/6172870.png" alt="">
+            </div>
+            <div class="text-center mt-2">
+              <p style="font-size: 12px; color:black">Carpet Wash</p>
+            </div>
+          </div> 
+        </a>
+
+        <a href="/dollwash" style="text-decoration: none;">
+          <div class="box-menu" style="width: 100px; padding-top:7px; height: 100px; border-style:solid; border-color:#F4F4F4; border-width:4px;; border-radius:16px">
+            <div class="image d-flex justify-content-center">
+              <img width="50px" height="50px" src="https://cdn-icons-png.flaticon.com/512/1746/1746356.png" alt="">
+            </div>
+            <div class="text-center mt-2">
+              <p style="font-size: 12px; color:black">Doll Wash</p>
+            </div>
+          </div> 
+        </a>
+
+        <a href="bag" style="text-decoration: none;">
+          <div class="box-menu" style="width: 100px; padding-top:7px; height: 100px; border-style:solid; border-color:#F4F4F4; border-width:4px;; border-radius:16px">
+            <div class="image d-flex justify-content-center">
+              <img width="50px" height="50px" src="https://cdn-icons.flaticon.com/png/512/2822/premium/2822419.png?token=exp=1641652938~hmac=c803755f490a2c8b91944836a5c6b6f0" alt="">
+            </div>
+            <div class="text-center mt-2">
+              <p style="font-size: 12px; color:black">Bag Wash</p>
+            </div>
+          </div> 
+        </a>
     </div>
 
     <script>
