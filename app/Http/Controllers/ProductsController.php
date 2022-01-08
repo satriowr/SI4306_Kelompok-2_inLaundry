@@ -94,4 +94,11 @@ class ProductsController extends Controller
     {
         //
     }
+
+    public function dryclean(){
+        return view('user.dryclean');
+    }
+    public function drycleanPost(Request $request){
+        dd($request->all());
+    }
 }

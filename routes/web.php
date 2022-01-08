@@ -51,3 +51,18 @@ Route::get('/admin/products', [ProductsController::class, 'index']);
 Route::resource('/admin/products', ProductsController::class);
 
 Route::get('/home', [user_indexController::class, 'index']);
+
+Route::get('/dryclean', [ProductsController::class, 'dryclean']);
+Route::post('/dryclean', [ProductsController::class, 'drycleanPost']);
+
+// Route::get('/fullwash', [ProductsController::class, 'fullwash']);
+
+// Route::get('/iron', [ProductsController::class, 'iron']);
+
+// Route::get('/shoewash', [ProductsController::class, 'shoewash']);
+
+// Route::get('/carpetwash', [ProductsController::class, 'carpetwash']);
+
+// Route::get('/dollwash', [ProductsController::class, 'dollwash']);
+
+// Route::get('/bagwash', [ProductsController::class, 'bagwash']);
