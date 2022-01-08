@@ -34,9 +34,6 @@ Route::get('/admin/report', function () {
     return view('Admin.report');
 });
 
-Route::get('/admin/product', function () {
-    return view('Admin.product');
-});
 
 Route::get('/signup', [registerController::class, 'index']);
 Route::post('/signup', [registerController::class, 'store']);
