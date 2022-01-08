@@ -69,15 +69,3 @@ Route::post('/dollwash', [ProductsController::class, 'dollwashPost']);
 
 Route::get('/bagwash', [ProductsController::class, 'bagwash']);
 Route::post('/bagwash', [ProductsController::class, 'bagwashPost']);
-
-// Route::get('/fullwash', [ProductsController::class, 'fullwash']);
-
-// Route::get('/iron', [ProductsController::class, 'iron']);
-
-// Route::get('/shoewash', [ProductsController::class, 'shoewash']);
-
-// Route::get('/carpetwash', [ProductsController::class, 'carpetwash']);
-
-// Route::get('/dollwash', [ProductsController::class, 'dollwash']);
-
-// Route::get('/bagwash', [ProductsController::class, 'bagwash']);
