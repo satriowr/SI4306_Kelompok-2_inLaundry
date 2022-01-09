@@ -32,7 +32,6 @@
                   <tr>
                     <th scope="col">Services Detail</th>
                     <th scope="col">Price</th>
-                    <th scope="col">Order Quantity</th>
                     <th scope="col">Option</th>
                   </tr>
                 </thead>
@@ -52,12 +51,8 @@
                         </td>
                         <td>  
                             <p class="mt-3" style="font-weight: bold">Rp {{ $product->price }}</p>
-                            <h6 style="color: #C5C7CD">1kg</h6>
                         </td>
-                        <td>
-                            <h6 class="mt-3" style="font-weight: bold">-</h6>
-                            {{-- <p style="color: #C5C7CD">9:30 PM</p> --}}
-                        </td>
+                    
                         <td>
                             <a href="/admin/products/{{$product->id}}/edit" class="btn btn-warning btn-sm mt-3">Update</a>
                             
