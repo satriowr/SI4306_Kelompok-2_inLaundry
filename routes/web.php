@@ -51,6 +51,11 @@ Route::get('/logout', [loginController::class, 'logout'])->name('logout');
 Route::get('/admin/order', [admin_orderController::class, 'index']);
 Route::post('/admin/order', [admin_orderController::class, 'update']);
 
+Route::get('/admin/order/{id}', [admin_orderController::class, 'update']);
+Route::post('/admin/order/{id}', [admin_orderController::class, 'updatePost']);
+
+Route::get('/admin/order/delete/{id}', [admin_orderController::class, 'delete']);
+
 Route::get('/admin/products', [ProductsController::class, 'index']);
 Route::resource('/admin/products', ProductsController::class);
 
@@ -77,3 +82,8 @@ Route::post('/dollwash', [ProductsController::class, 'dollwashPost'])->middlewar
 
 Route::get('/bagwash', [ProductsController::class, 'bagwash'])->middleware('auth');
 Route::post('/bagwash', [ProductsController::class, 'bagwashPost'])->middleware('auth');
+
+
+
+
+

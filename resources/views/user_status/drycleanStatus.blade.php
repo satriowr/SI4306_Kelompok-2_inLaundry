@@ -213,30 +213,33 @@
             <div class="status d-flex flex-row">
                 <div class="status-content" style="margin-top:100px; margin-left:100px">
                     <h2 style="font-weight: bold">Status</h2>
-                    <div class="steper">
-                        <!-- completed -->
-                          <div class="step completed">
-                            <div class="v-stepper">
-                              <div class="circle"></div>
-                              <div class="line"></div>
-                            </div>
-                      
-                            <div class="content">
-                            <p>Pengemudi sedang menuju ke tempatmu</p>
+                    
+                    @foreach ($status as $item)
+                        <div class="steper">
+                            <!-- completed -->
+                            <div class="step completed">
+                                <div class="v-stepper">
+                                <div class="circle"></div>
+                                <div class="line"></div>
+                                </div>
+                        
+                                <div class="content">
+                                <p>{{ $item->status }}</p>
+                                <p>{{ $item->nb }}</p>
+                                </div>
                             </div>
                         </div>
-                      </div>
+                        </div>
+ 
+                    @endforeach
+                    
                 </div>
-    
-                <div class="time" style="margin-top:156px; margin-left:30px">
-                    <p>10:00 WIB</p>
+                
+                <div class="pay" style="width:370px; height:496px;  border-style:solid; border-color:#F4F4F4; border-width:4px; border-radius:10px; padding-top:20px; padding-left:20px">
+                    <h5 style="font-weight:bold">Billing Summary</h5>
                 </div>
             </div>
             
-            <div class="pay" style="width:370px; height:496px;  border-style:solid; border-color:#F4F4F4; border-width:4px; border-radius:10px; padding-top:20px; padding-left:20px">
-                <h5 style="font-weight:bold">Billing Summary</h5>
-            </div>
-
         </div>
     </div>
 </body>

@@ -26,7 +26,6 @@
         <form action="" method="post">
             <div class="bar-atas" style="margin-top: 69px">
                 <h3 style="font-weight: bold">Order Page</h3>
-                <button style="margin-top:20px" type="submit" class="btn btn-danger">Update Order</button>
             </div>
     
             <table class="table" style="margin-top:35px">
@@ -41,11 +40,8 @@
                 <tbody>
                     @foreach ($showOrder as $order)
                     <tr>
-                        <td>
+                        <td style="width:500px">
                             <div class="detail d-flex flex-row">
-                                <div class="image">
-                                    <img width="44px" height="44px" style="border-radius:100px" src="{{ $order->image }}" alt="">
-                                </div>
                                 <div class="text" style="margin-left:24px">
                                     <h6 style="font-weight: bold">{{ $order->name }}</h6>
                                     <p style="color: #C5C7CD">{{ $order->address }}</p>
@@ -53,20 +49,16 @@
                             </div>
                         </td>
                         <td>
-                            <h6 style="font-weight: bold">{{ $order->Service_detail }} - 5 kg</h6>
-                            <p style="color: #C5C7CD">{{ $order->price }}</p>
+                            <h6 style="font-weight: bold">{{ $order->service }} </h6>
+                            <p style="color: #C5C7CD">{{ $order->weight }} Kg</p>
                         </td>
                         <td>
                             <h6 style="font-weight: bold">{{ $order->created_at }}</h6>
-                            {{-- <p style="color: #C5C7CD">9:30 PM</p> --}}
                         </td>
                         <td>
-                            <select class="form-select" name="status" aria-label="Default select example">
-                                <option selected>Choose Status</option>
-                                <option  value="1">Waiting</option>
-                                <option value="2">Pick Up</option>
-                                <option value="3">Finish</option>
-                            </select>
+                            <a href="/admin/order/{{ $order->id }}">
+                                <button style="margin-top:20px" type="button" class="btn btn-warning">Update Order</button>
+                            </a>
                         </td>
                       </tr>
                     @endforeach

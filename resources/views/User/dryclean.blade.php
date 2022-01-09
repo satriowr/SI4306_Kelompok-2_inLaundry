@@ -13,7 +13,7 @@
                 @csrf
                 <div class="mb-3">
                     <label for="name" class="form-label">Customer Name</label>
-                    <input style="width: 450px" type="text" name="name" class="form-control" id="name" value="Satrio Rahman Wicaksono" readonly>
+                    <input style="width: 450px" type="text" name="name" class="form-control" id="name" value="{{ auth()->user()->name }}" readonly>
                 </div>
 
                 <div class="mb-3">

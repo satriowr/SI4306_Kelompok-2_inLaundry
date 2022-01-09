@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\products;
 use Illuminate\Http\Request;
 use DB;
+use App\Models\customerOrder;
 
 class ProductsController extends Controller
 {
@@ -116,7 +117,8 @@ class ProductsController extends Controller
 
     public function drycleanStatus()
     {
-        return view('user_status.drycleanStatus');
+        $status = customerOrder::all();
+        return view('user_status.drycleanStatus', compact('status'));
     }
 
     public function bagwash()
