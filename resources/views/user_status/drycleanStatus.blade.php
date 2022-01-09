@@ -235,8 +235,37 @@
                     
                 </div>
                 
-                <div class="pay" style="width:370px; height:496px;  border-style:solid; border-color:#F4F4F4; border-width:4px; border-radius:10px; padding-top:20px; padding-left:20px">
+                <div class="pay" style="width:370px; height:496px;  border-style:solid; border-color:#F4F4F4; border-width:4px; border-radius:10px; padding-top:20px; padding-left:20px; padding-right:20px">
                     <h5 style="font-weight:bold">Billing Summary</h5>
+                    <br>
+                    <p>Service : Dry Clean</p>
+                    <p>Price : 10.000</p>
+                    <br>
+
+
+                    @foreach ($status as $item)
+                    <p>weight : {{ $item->weight }} Kg</p>
+
+                    <?php
+                        $weight = $item->weight;
+                        $harga = $item->price;
+                        
+                        $total = $weight * $harga;
+                    ?>
+                    
+                    <p>Price : <?php echo $total; ?></p>
+                    @endforeach
+
+                    <form action="/dryclean/status" method="post">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Catatan untuk kami</label>
+                        <textarea name="note" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <br>
+                    <button style="width: 100%" type="submit" class="btn btn-primary">Pay Now</button>
+                    </form>
+                    
                 </div>
             </div>
             

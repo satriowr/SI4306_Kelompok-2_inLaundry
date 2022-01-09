@@ -27,9 +27,9 @@ Route::get('/', function () {
 //     return view('Admin.dashboard');
 // });
 
-Route::get('/admin/dashboard', [admin_dashboardController::class, 'index']);
-Route::get('/admin/dashboard/delete/{id}', [admin_dashboardController::class, 'deleteNote']);
-Route::post('/admin/dashboard/new', [admin_dashboardController::class, 'newNote']);
+Route::get('/admin/dashboard', [admin_dashboardController::class, 'index'])->middleware('admin');
+Route::get('/admin/dashboard/delete/{id}', [admin_dashboardController::class, 'deleteNote'])->middleware('admin');
+Route::post('/admin/dashboard/new', [admin_dashboardController::class, 'newNote'])->middleware('admin');
 
 // Route::get('/admin/order', function () {
 //     return view('Admin.order');
@@ -48,22 +48,23 @@ Route::post('/signin', [loginController::class, 'validates']);
 
 Route::get('/logout', [loginController::class, 'logout'])->name('logout');
 
-Route::get('/admin/order', [admin_orderController::class, 'index']);
-Route::post('/admin/order', [admin_orderController::class, 'update']);
+Route::get('/admin/order', [admin_orderController::class, 'index'])->middleware('admin');
+Route::post('/admin/order', [admin_orderController::class, 'update'])->middleware('admin');
 
-Route::get('/admin/order/{id}', [admin_orderController::class, 'update']);
-Route::post('/admin/order/{id}', [admin_orderController::class, 'updatePost']);
+Route::get('/admin/order/{id}', [admin_orderController::class, 'update'])->middleware('admin');
+Route::post('/admin/order/{id}', [admin_orderController::class, 'updatePost'])->middleware('admin');
 
-Route::get('/admin/order/delete/{id}', [admin_orderController::class, 'delete']);
+Route::get('/admin/order/delete/{id}', [admin_orderController::class, 'delete'])->middleware('admin');
 
-Route::get('/admin/products', [ProductsController::class, 'index']);
-Route::resource('/admin/products', ProductsController::class);
+Route::get('/admin/products', [ProductsController::class, 'index'])->middleware('admin');
+Route::resource('/admin/products', ProductsController::class)->middleware('admin');
 
 Route::get('/home', [user_indexController::class, 'index'])->middleware('auth');
 
 Route::get('/dryclean', [ProductsController::class, 'dryclean'])->middleware('auth');
 Route::post('/dryclean', [ProductsController::class, 'drycleanPost'])->middleware('auth');
 Route::get('/dryclean/status', [ProductsController::class, 'drycleanStatus'])->middleware('auth');
+Route::post('/dryclean/status', [ProductsController::class, 'drycleanStatusPost'])->middleware('auth');
 
 Route::get('/fullwash', [ProductsController::class, 'fullwash'])->middleware('auth');
 Route::post('/fullwash', [ProductsController::class, 'fullwashPost'])->middleware('auth');

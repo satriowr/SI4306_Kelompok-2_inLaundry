@@ -117,8 +117,17 @@ class ProductsController extends Controller
 
     public function drycleanStatus()
     {
+        $product = products::all();
         $status = customerOrder::all();
-        return view('user_status.drycleanStatus', compact('status'));
+        return view('user_status.drycleanStatus', compact('status', 'product'));
+    }
+
+    public function drycleanStatusPost(Request $request){
+        DB::table('customer_orders')->where('id',$request->id)->update([
+            'note' => $request->note
+        ]);
+
+        return redirect('/home');
     }
 
     public function bagwash()

@@ -398,10 +398,8 @@
                         </a>
                         <a href="" style="text-decoration: none">
                             <ion-icon name="notifications" style="margin-left:10px"></ion-icon>
-                        </a>   
-                    </div>
-
-
+                        </a>
+                    </div>   
 
                     <div class="profile">
                         <div class="right" style="margin-top: 4px; margin-right:10px;">

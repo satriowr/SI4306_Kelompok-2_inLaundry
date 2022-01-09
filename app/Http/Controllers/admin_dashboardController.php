@@ -9,6 +9,7 @@ use DB;
 class admin_dashboardController extends Controller
 {
     public function index(){
+        $this->authorize('admin');
         $showNote = note::all();
         return view('Admin.dashboard', compact('showNote'));
     }
