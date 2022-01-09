@@ -99,6 +99,16 @@ class ProductsController extends Controller
         return view('user.dryclean');
     }
     public function drycleanPost(Request $request){
-        dd($request->all());
+        //dd($request->all());
+        DB::table('orders')->insert([
+            'name' => $request->name,
+            'address' => $request->address,
+            'service' => $request->service,
+            'weight' => $request->weight,
+            'price' => $request->price,
+        ]);
+
+        return redirect('/dryclean/status');
+        
     }
 }
