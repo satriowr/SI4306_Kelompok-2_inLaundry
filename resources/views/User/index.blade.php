@@ -99,7 +99,7 @@
         <a href="/bagwash" style="text-decoration: none;">
           <div class="box-menu" style="width: 100px; padding-top:7px; height: 100px; border-style:solid; border-color:#F4F4F4; border-width:4px;; border-radius:16px">
             <div class="image d-flex justify-content-center">
-              <img width="50px" height="50px" src="https://cdn-icons.flaticon.com/png/512/2822/premium/2822419.png?token=exp=1641652938~hmac=c803755f490a2c8b91944836a5c6b6f0" alt="">
+              <img width="50px" height="50px" src="https://i.ibb.co/71gB8HG/handbag.png" alt="">
             </div>
             <div class="text-center mt-2">
               <p style="font-size: 12px; color:black">Bag Wash</p>
