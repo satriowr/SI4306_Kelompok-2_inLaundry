@@ -51,6 +51,7 @@ Route::get('/home', [user_indexController::class, 'index']);
 
 Route::get('/dryclean', [ProductsController::class, 'dryclean']);
 Route::post('/dryclean', [ProductsController::class, 'drycleanPost']);
+Route::get('/dryclean/status', [ProductsController::class, 'drycleanStatus']);
 
 Route::get('/fullwash', [ProductsController::class, 'fullwash']);
 Route::post('/fullwash', [ProductsController::class, 'fullwashPost']);

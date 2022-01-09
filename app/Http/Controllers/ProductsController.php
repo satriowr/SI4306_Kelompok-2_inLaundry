@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\products;
 use Illuminate\Http\Request;
+use DB;
 
 class ProductsController extends Controller
 {
@@ -100,7 +101,7 @@ class ProductsController extends Controller
     }
     public function drycleanPost(Request $request){
         //dd($request->all());
-        DB::table('orders')->insert([
+        DB::table('customer_orders')->insert([
             'name' => $request->name,
             'address' => $request->address,
             'service' => $request->service,
@@ -108,7 +109,10 @@ class ProductsController extends Controller
             'price' => $request->price,
         ]);
 
-        return redirect('/dryclean/status');
-        
+        return redirect('/dryclean/status');   
+    }
+
+    public function drycleanStatus(){
+        return view('user_status.drycleanStatus');
     }
 }
