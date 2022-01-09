@@ -52,14 +52,20 @@ Route::get('/home', [user_indexController::class, 'index']);
 Route::get('/dryclean', [ProductsController::class, 'dryclean']);
 Route::post('/dryclean', [ProductsController::class, 'drycleanPost']);
 
-// Route::get('/fullwash', [ProductsController::class, 'fullwash']);
+Route::get('/fullwash', [ProductsController::class, 'fullwash']);
+Route::post('/fullwash', [ProductsController::class, 'fullwashPost']);
 
-// Route::get('/iron', [ProductsController::class, 'iron']);
+Route::get('/iron', [ProductsController::class, 'iron']);
+Route::post('/iron', [ProductsController::class, 'ironPost']);
 
-// Route::get('/shoewash', [ProductsController::class, 'shoewash']);
+Route::get('/shoeswash', [ProductsController::class, 'shoeswash']);
+Route::post('/shoeswash', [ProductsController::class, 'shoeswashPost']);
 
-// Route::get('/carpetwash', [ProductsController::class, 'carpetwash']);
+Route::get('/carpetwash', [ProductsController::class, 'carpetwash']);
+Route::post('/carpetwash', [ProductsController::class, 'carpetwashPost']);
 
-// Route::get('/dollwash', [ProductsController::class, 'dollwash']);
+Route::get('/dollwash', [ProductsController::class, 'dollwash']);
+Route::post('/dollwash', [ProductsController::class, 'dollwashPost']);
 
-// Route::get('/bagwash', [ProductsController::class, 'bagwash']);
+Route::get('/bagwash', [ProductsController::class, 'bagwash']);
+Route::post('/bagwash', [ProductsController::class, 'bagwashPost']);
