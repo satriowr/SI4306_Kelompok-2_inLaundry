@@ -6,6 +6,7 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\admin_orderController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\user_indexController;
+use App\Http\Controllers\admin_dashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,13 @@ Route::get('/', function () {
     return view('onBoarding');
 });
 
-Route::get('/admin/dashboard', function () {
-    return view('Admin.dashboard');
-});
+// Route::get('/admin/dashboard', function () {
+//     return view('Admin.dashboard');
+// });
+
+Route::get('/admin/dashboard', [admin_dashboardController::class, 'index']);
+Route::get('/admin/dashboard/delete/{id}', [admin_dashboardController::class, 'deleteNote']);
+Route::post('/admin/dashboard/new', [admin_dashboardController::class, 'newNote']);
 
 // Route::get('/admin/order', function () {
 //     return view('Admin.order');
