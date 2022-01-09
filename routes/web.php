@@ -46,6 +46,8 @@ Route::post('/signup', [registerController::class, 'store']);
 Route::get('/signin', [loginController::class, 'index'])->name('login');
 Route::post('/signin', [loginController::class, 'validates']);
 
+Route::get('/logout', [loginController::class, 'logout'])->name('logout');
+
 Route::get('/admin/order', [admin_orderController::class, 'index']);
 Route::post('/admin/order', [admin_orderController::class, 'update']);
 
