@@ -96,10 +96,12 @@ class ProductsController extends Controller
         //
     }
 
-    public function dryclean(){
+    public function dryclean()
+    {
         return view('user.dryclean');
     }
-    public function drycleanPost(Request $request){
+    public function drycleanPost(Request $request)
+    {
         //dd($request->all());
         DB::table('customer_orders')->insert([
             'name' => $request->name,
@@ -109,10 +111,155 @@ class ProductsController extends Controller
             'price' => $request->price,
         ]);
 
-        return redirect('/dryclean/status');   
+        return redirect('/dryclean/status');
     }
 
-    public function drycleanStatus(){
+    public function drycleanStatus()
+    {
         return view('user_status.drycleanStatus');
+    }
+
+    public function bagwash()
+    {
+        return view('user.bagwash');
+    }
+
+    public function bagwashPost(Request $request)
+    {
+        //dd($request->all());
+        DB::table('customer_orders')->insert([
+            'name' => $request->name,
+            'address' => $request->address,
+            'service' => $request->service,
+            'weight' => $request->weight,
+            'price' => $request->price,
+        ]);
+
+        return redirect('/bagwash/status');
+    }
+
+    public function bagwashStatus()
+    {
+        return view('user_status.bagwashStatus');
+    }
+
+    public function carpetwash()
+    {
+        return view('user.carpetwash');
+    }
+
+    public function carpetwashPost(Request $request)
+    {
+        //dd($request->all());
+        DB::table('customer_orders')->insert([
+            'name' => $request->name,
+            'address' => $request->address,
+            'service' => $request->service,
+            'weight' => $request->weight,
+            'price' => $request->price,
+        ]);
+
+        return redirect('/carpetwash/status');
+    }
+
+    public function carpetwashStatus()
+    {
+        return view('user_status.carpetwashStatus');
+    }
+
+    public function dollwash()
+    {
+        return view('user.dollwash');
+    }
+
+    public function dollwashPost(Request $request)
+    {
+        //dd($request->all());
+        DB::table('customer_orders')->insert([
+            'name' => $request->name,
+            'address' => $request->address,
+            'service' => $request->service,
+            'weight' => $request->weight,
+            'price' => $request->price,
+        ]);
+
+        return redirect('/dollwash/status');
+    }
+
+    public function dollwashStatus()
+    {
+        return view('user_status.dolltwashStatus');
+    }
+
+    public function fullwash()
+    {
+        return view('user.fullwash');
+    }
+
+    public function fullwashPost(Request $request)
+    {
+        //dd($request->all());
+        DB::table('customer_orders')->insert([
+            'name' => $request->name,
+            'address' => $request->address,
+            'service' => $request->service,
+            'weight' => $request->weight,
+            'price' => $request->price,
+        ]);
+
+        return redirect('/fullwash/status');
+    }
+
+    public function fullwashStatus()
+    {
+        return view('user_status.fullwashStatus');
+    }
+
+    public function iron()
+    {
+        return view('user.iron');
+    }
+
+    public function ironPost(Request $request)
+    {
+        //dd($request->all());
+        DB::table('customer_orders')->insert([
+            'name' => $request->name,
+            'address' => $request->address,
+            'service' => $request->service,
+            'weight' => $request->weight,
+            'price' => $request->price,
+        ]);
+
+        return redirect('/iron/status');
+    }
+
+    public function ironStatus()
+    {
+        return view('user_status.ironStatus');
+    }
+
+    public function shoeswash()
+    {
+        return view('user.shoeswash');
+    }
+
+    public function shoeswashPost(Request $request)
+    {
+        //dd($request->all());
+        DB::table('customer_orders')->insert([
+            'name' => $request->name,
+            'address' => $request->address,
+            'service' => $request->service,
+            'weight' => $request->weight,
+            'price' => $request->price,
+        ]);
+
+        return redirect('/shoes/status');
+    }
+
+    public function shoeswashStatus()
+    {
+        return view('user_status.shoeswashStatus');
     }
 }
