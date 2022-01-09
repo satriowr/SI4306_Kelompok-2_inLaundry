@@ -235,9 +235,7 @@
             <div class="login-fill">
                 <h3>Log in</h3>
                 
-                <div class="row">
-                    <div class="col-md-12"> <a class="btn btn-lg btn-google btn-block btn-outline" href="#"><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Log in with Google</a> </div>
-                </div>
+               
     
                 <form action="/signin" method="post">
                 @csrf

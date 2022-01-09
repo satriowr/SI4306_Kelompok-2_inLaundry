@@ -235,9 +235,7 @@
             <div class="login-fill">
                 <h3>Sign up</h3>
     
-                <div class="row">
-                    <div class="col-md-12"> <a class="btn btn-lg btn-google btn-block btn-outline" href="#"><img src="https://img.icons8.com/color/16/000000/google-logo.png">Sign up with Google</a> </div>
-                </div>
+                
     
                 <form action="/signup" method="POST">
                 @csrf 
@@ -253,6 +251,19 @@
                                 </div>
                             @enderror
                             
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="email">Telephone Number</label>
+                            <input type="text" name="telephone_number" class="form-control mt-1 @error('email')
+                            is-invalid @enderror" id="telephone_number" placeholder="Enter telephone number" required>
+                        
+                            @error('telephone-number')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        
                         </div>
 
                         <div class="form-group mt-3">
