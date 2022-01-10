@@ -1,33 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="assets\logo\logoEdit.png">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Status | inLaundry</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
-
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
     <style>
         body{
           min-height: 100vh;
           overflow: hidden;
           font-family: 'Nunito', sans-serif;
         }
+
         .icon-navbar ion-icon{
-            font-size: 1.5em;
-            color: #1597E5;
-            opacity: 70%;
+        font-size: 1.5em;
+        color: #1597E5;
+        opacity: 70%;
         }
 
         .profile ion-icon{
@@ -35,345 +30,131 @@
             color: #1597E5;
             opacity: 70%;
         }
-
         .profile{
             display: flex;
             flex-direction: row;
             color: #1597E5;
-           
-        }
-
-        .right{
-            display: flex;
-            flex-direction: row;
-        }
-
-        .flexbox{
-            display: flex;
-            flex-direction:row;
-        }
-
-        * {box-sizing: border-box;}
-        body {font-family: Verdana, sans-serif;}
-        .mySlides {display: none;}
-        img {vertical-align: middle;}
         
-        /* Slideshow container */
-        .slideshow-container {
-          max-width: 1000px;
-          position: relative;
-          margin: auto;
         }
+
+    .wrapper-progressBar {
+    width: 100%
+    }
+
+    .progressBar {
+    }
+
+    .progressBar li {
+        list-style-type: none;
+        float: left;
+        width: 300px;
+        position: relative;
+        text-align: center;
+    }
+
+    .progressBar li:before {
+        content: " ";
+        line-height: 30px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ddd;
+        display: block;
+        text-align: center;
+        margin: 0 auto 10px;
+        background-color: white
+    }
+
+    .progressBar li:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: #ddd;
+        top: 15px;
+        left: -50%;
+        z-index: -1;
+    }
+
+    .progressBar li:first-child:after {
+        content: none;
+    }
+
+    .progressBar li.active {
+        color: dodgerblue;
+    }
+
+    .progressBar li.active:before {
+        border-color: dodgerblue;
+        background-color: dodgerblue
+    }
+
+    .progressBar .active:after {
+        background-color: dodgerblue;
+    }
+
+    .right{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .step {
+        padding: 10px;
         
-        /* Caption text */
-        .text {
-          color: #f2f2f2;
-          font-size: 15px;
-          padding: 8px 12px;
-          position: absolute;
-          bottom: 8px;
-          width: 100%;
-          text-align: center;
-        }
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
         
-        /* Number text (1/3 etc) */
-        .numbertext {
-          color: #f2f2f2;
-          font-size: 12px;
-          padding: 8px 12px;
-          position: absolute;
-          top: 0;
-        }
-        
-        /* The dots/bullets/indicators */
-        .dot {
-          height: 10px;
-          width: 10px;
-          margin: 0 2px;
-          background-color: #1597E5;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
-        }
-        
-        .active {
-          background-color: #717171;
-        }
-        
-        /* Fading animation */
-        .fade {
-          -webkit-animation-name: fade;
-          -webkit-animation-duration: 1.5s;
-          animation-name: fade;
-          animation-duration: 1.5s;
-        }
-        
-        @-webkit-keyframes fade {
-          from {opacity: .4} 
-          to {opacity: 1}
-        }
-        
-        @keyframes fade {
-          from {opacity: .4} 
-          to {opacity: 1}
-        }
-        
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-          .text {font-size: 11px}
-        }
+        background-color: cream;
+    }
 
-        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    .v-stepper {
+        position: relative;
+        /*   visibility: visible; */
+    }
 
-        /* Basics */
-        .mapboxgl-ctrl-geocoder,
-        .mapboxgl-ctrl-geocoder *,
-        .mapboxgl-ctrl-geocoder *:after,
-        .mapboxgl-ctrl-geocoder *:before {
-          box-sizing: border-box;
-        }
+    .step .circle {
+        background-color: white;
+        border: 3px solid gray;
+        border-radius: 100%;
+        width: 20px;    /* +6 for border */
+        height: 20px;
+        display: inline-block;
+    }
 
-        .mapboxgl-ctrl-geocoder {
-          font-size: 18px;
-          line-height: 24px;
-          font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
-          position: relative;
-          background-color: #fff;
-          width: 100%;
-          min-width: 450px;
-          z-index: 1;
-          border-radius: 4px;
-          transition: width .25s, min-width .25s;
-        }
+    .step .line {
+        top: 23px;
+        left: 12px;
+        /*   height: 120px; */
+        height: 100%;
+            
+        position: absolute;
+        border-left: 3px solid gray;
+    }
 
-        .mapboxgl-ctrl-geocoder--input {
-          font: inherit;
-          width: 100%;
-          border: 0;
-          background-color: transparent;
-          margin: 0;
-          height: 50px;
-          color: #404040; /* fallback */
-          color: rgba(0, 0, 0, 0.75);
-          padding: 6px 45px;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          overflow: hidden;
-        }
+    .step.completed .circle {
+        visibility: visible;
+        background-color: rgb(6,150,215);
+        border-color: rgb(6,150,215);
+    }
 
-        .mapboxgl-ctrl-geocoder--input::-ms-clear {
-          display: none; /* hide input clear button in IE */
-        }
+    .step.completed .line {
+        border-left: 3px solid rgb(6,150,215);
+    }
 
-        .mapboxgl-ctrl-geocoder--input:focus {
-          box-shadow: none;
-          outline: none;
-        }
+    .step:last-child .line {
+        border-left: 3px solid white;
+        z-index: -1; /* behind the circle to completely hide */
+    }
 
-        .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--pin-right > * {
-          z-index: 2;
-          position: absolute;
-          right: 8px;
-          top: 7px;
-          display: none;
-        }
-
-        .mapboxgl-ctrl-geocoder,
-        .mapboxgl-ctrl-geocoder .suggestions {
-          border-style: solid;
-          border-width: 1px;
-          border-color: #ced4da;
-        }
-
-        /* Collapsed */
-        .mapboxgl-ctrl-geocoder.mapboxgl-ctrl-geocoder--collapsed {
-          width: 50px;
-          min-width: 50px;
-          transition: width .25s, min-width .25s;
-        }
-
-        /* Suggestions */
-        .mapboxgl-ctrl-geocoder .suggestions {
-          background-color: #fff;
-          border-radius: 4px;
-          left: 0;
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          position: absolute;
-          width: 100%;
-          top: 110%; /* fallback */
-          top: calc(100% + 6px);
-          z-index: 1000;
-          overflow: hidden;
-          font-size: 15px;
-        }
-
-        .mapboxgl-ctrl-bottom-left .suggestions,
-        .mapboxgl-ctrl-bottom-right .suggestions {
-          top: auto;
-          bottom: 100%;
-        }
-
-        .mapboxgl-ctrl-geocoder .suggestions > li > a {
-          cursor: default;
-          display: block;
-          padding: 6px 12px;
-          color: #404040;
-        }
-
-        .mapboxgl-ctrl-geocoder .suggestions > .active > a,
-        .mapboxgl-ctrl-geocoder .suggestions > li > a:hover {
-          color: #404040;
-          background-color: #f3f3f3;
-          text-decoration: none;
-          cursor: pointer;
-        }
-
-        .mapboxgl-ctrl-geocoder--suggestion-title {
-          font-weight: bold;
-        }
-
-        .mapboxgl-ctrl-geocoder--suggestion-title,
-        .mapboxgl-ctrl-geocoder--suggestion-address {
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-
-        /* Icons */
-        .mapboxgl-ctrl-geocoder--icon {
-          display: inline-block;
-          vertical-align: middle;
-          speak: none;
-          fill: #757575;
-          top: 15px;
-        }
-
-        .mapboxgl-ctrl-geocoder--icon-search {
-          position: absolute;
-          top: 13px;
-          left: 12px;
-          width: 23px;
-          height: 23px;
-        }
-
-        .mapboxgl-ctrl-geocoder--button {
-          padding: 0;
-          margin: 0;
-          border: none;
-          cursor: pointer;
-          background: #fff;
-          line-height: 1;
-        }
-
-        .mapboxgl-ctrl-geocoder--icon-close {
-          width: 20px;
-          height: 20px;
-          margin-top: 8px;
-          margin-right: 3px;
-        }
-
-        .mapboxgl-ctrl-geocoder--button:hover .mapboxgl-ctrl-geocoder--icon-close {
-          fill: #909090;
-        }
-
-        .mapboxgl-ctrl-geocoder--icon-loading {
-          width: 26px;
-          height: 26px;
-          margin-top: 5px;
-          margin-right: 0px;
-          -moz-animation: rotate 0.8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
-          -webkit-animation: rotate 0.8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
-          animation: rotate 0.8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
-        }
-
-        /* Animation */
-        @-webkit-keyframes rotate {
-          from {
-            -webkit-transform: rotate(0);
-            transform: rotate(0);
-          }
-          to {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-          }
-        }
-
-        @keyframes rotate {
-          from {
-            -webkit-transform: rotate(0);
-            transform: rotate(0);
-          }
-          to {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-          }
-        }
-
-        /* Media queries*/
-        @media screen and (min-width: 640px) {
-
-          .mapboxgl-ctrl-geocoder.mapboxgl-ctrl-geocoder--collapsed {
-            width: 36px;
-            min-width: 36px;
-          }
-
-          .mapboxgl-ctrl-geocoder {
-            width: 33.3333%;
-            font-size: 15px;
-            line-height: 20px;
-            max-width: 360px;
-          }
-          .mapboxgl-ctrl-geocoder .suggestions {
-            font-size: 13px;
-          }
-
-          .mapboxgl-ctrl-geocoder--icon {
-            top: 8px;
-          }
-
-          .mapboxgl-ctrl-geocoder--icon-close {
-            width: 16px;
-            height: 16px;
-            margin-top: 3px;
-            margin-right: 0;
-          }
-
-          .mapboxgl-ctrl-geocoder--icon-search {
-            left: 7px;
-            width: 20px;
-            height: 20px;
-          }
-
-          .mapboxgl-ctrl-geocoder--input {
-            height: 36px;
-            padding: 6px 35px;
-          }
-
-          .mapboxgl-ctrl-geocoder--icon-loading {
-            width: 26px;
-            height: 26px;
-            margin-top: -2px;
-            margin-right: -5px;
-          }
-
-          .mapbox-gl-geocoder--error{
-            color:#909090;
-            padding: 6px 12px;
-            font-size: 16px;
-            text-align: center
-          }
-
-        }
-
+    .content {
+        margin-left: 20px;
+        display: inline-block;
+    }
+    
     </style>
-    
-    
 </head>
 <body>
-  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
-
     <nav style="background-color:#F7FAFF" class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
           <a class="navbar-brand" href="/home">
@@ -422,46 +203,88 @@
     </nav>
 
     <div class="container">
-        @yield('container')
+        <div class="d-flex flex-row">
+            <div class="row" style="margin-top:100px;"> 
+                <div class="wrapper-progressBar">
+                  <ul class="progressBar">
+                    <li class="active">Waiting for payment</li>
+                    <li class="">Processed</li>
+                    <li class="">Finish</li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info d-flex flex-row justify-content-between">
+            <div class="status d-flex flex-row">
+                <div class="status-content" style="margin-top:100px; margin-left:100px">
+                    <h2 style="font-weight: bold">Status</h2>
+                    
+                    @foreach ($status as $item)
+                        <div class="steper">
+                            <!-- completed -->
+                            <div class="step completed">
+                                <div class="v-stepper">
+                                <div class="circle"></div>
+                                <div class="line"></div>
+                                </div>
+                        
+                                <div class="content">
+                                <p>{{ $item->status }}</p>
+                                <p>{{ $item->nb }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+ 
+                    @endforeach
+                    
+                </div>
+                
+                <div class="pay" style="width:370px; height:496px;  border-style:solid; border-color:#F4F4F4; border-width:4px; border-radius:10px; padding-top:20px; padding-left:20px; padding-right:20px">
+                    <h5 style="font-weight:bold">Billing Summary</h5>
+                    <br>
+                    <p>Service : Dry Clean</p>
+                    @foreach ($product as $harga)
+                    <p>Price : {{ $harga->price }}</p>
+                    @endforeach
+                    
+                    <br>
+
+                    @foreach ($product as $harga)
+                        <?php
+                            $price = $harga->price
+                        ?>
+                    @endforeach
+
+                    {{-- @dd($price) --}}
+                   
+                    @foreach ($status as $item)
+                    <p>weight : {{ $item->weight }} Kg</p>
+
+                    <?php
+                        $weight = $item->weight;
+                        $total = $weight * $price;
+                    ?>
+                    <p>Total : <?php echo $total; ?></p>
+                    
+                    
+
+                    <form action="/dryclean/status" method="post">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Catatan untuk kami</label>
+                        <textarea name="note" class="form-control" readonly id="exampleFormControlTextarea1" rows="3">{{ $item->note }}</textarea>
+                    </div>
+                    <br>
+                    <button style="width: 100%" type="submit" disabled  class="btn btn-primary">Pay Now</button>
+                    </form>
+                    @endforeach
+                </div>
+            </div>
+            
+        </div>
     </div>
-
-    <script>
-    mapboxgl.accessToken = 'pk.eyJ1Ijoic2F0cmlvcmFobWFudyIsImEiOiJja255ZWs1dzUxN3l6MnZxcXlqZW96d2NyIn0.kKMsvVnF3QZodyIptAVAaQ';
-    const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [106.8456, 6.2088],
-    zoom: 5
-    });
-     
-    // Add the control to the map.
-    const geocoder = new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
-    mapboxgl: mapboxgl
-    });
-     
-    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
-
-    map.addControl(
-    new mapboxgl.GeolocateControl({
-    positionOptions: {
-    enableHighAccuracy: true
-    },
-    // When active the map will receive updates to the device's location as it changes.
-    trackUserLocation: true,
-    // Draw an arrow next to the location dot to indicate which direction the device is heading.
-    showUserHeading: true
-    })
-    );
-    </script>
-
-    <script>
-      //console.log(document.getElementsByTagName("input"));
-      document.getElementsByTagName("input")[2].setAttribute("name", "address"); 
-      document.getElementsByTagName("input")[2].setAttribute("autocomplete", "off"); 
-    </script>
-    
-    </body>
-    </html>
 </body>
 </html>
+

@@ -84,7 +84,7 @@ Route::post('/dollwash', [ProductsController::class, 'dollwashPost'])->middlewar
 Route::get('/bagwash', [ProductsController::class, 'bagwash'])->middleware('auth');
 Route::post('/bagwash', [ProductsController::class, 'bagwashPost'])->middleware('auth');
 
-
+Route::get('/status', [ProductsController::class, 'status'])->middleware('auth');
 
 
 

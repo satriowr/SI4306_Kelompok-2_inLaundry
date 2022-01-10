@@ -216,7 +216,9 @@
                     <img width="170" src="assets\logo\logo.png" alt="">
                 </h6>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in pellentesque neque. Vestibulum imperdiet dolor neque, eget aliquam urna pellentesque non. Suspendisse viverra dignissim odio.
+                  inLaundry is the modern Solution for your laundry problem
+
+                  With us, your laundry will be done in no time and we’re gonna deliver it for you.
                 </p>
               </div>
               <!-- Grid column -->

@@ -117,13 +117,16 @@ class ProductsController extends Controller
 
     public function drycleanStatus()
     {
-        $product = products::all();
+        $product = products::where('id', '=', 1)->get();
+        //dd($products);
         $status = customerOrder::all();
         return view('user_status.drycleanStatus', compact('status', 'product'));
     }
 
     public function drycleanStatusPost(Request $request){
-        DB::table('customer_orders')->where('id',$request->id)->update([
+
+        //dd($request->all());
+        DB::table('customer_orders')->where('id', '=', 1)->update([
             'note' => $request->note
         ]);
 
@@ -272,5 +275,11 @@ class ProductsController extends Controller
     public function shoeswashStatus()
     {
         return view('user_status.shoeswashStatus');
+    }
+
+    public function status(){
+        $product = products::where('id', '=', 1)->get();
+        $status = customerOrder::all();
+        return view('user.status', compact('status', 'product'));
     }
 }
