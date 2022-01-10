@@ -9,7 +9,7 @@ use App\Models\customerOrder;
 class admin_orderController extends Controller
 {
     public function index(){
-        $this->autorize('admin');
+        $this->authorize('admin');
         $showOrder = customerOrder::all();
         return view('Admin.order', compact('showOrder'));
     }
